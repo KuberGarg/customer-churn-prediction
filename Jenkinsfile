@@ -6,13 +6,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'pip install -r requirements.txt'
+                bat 'C:\\Users\\hp\\anaconda3\\python.exe -m pip install -r requirements.txt'
             }
         }
 
         stage('Run ML Project') {
             steps {
-                bat 'python project.py'
+                bat 'C:\\Users\\hp\\anaconda3\\python.exe project.py'
             }
         }
 
