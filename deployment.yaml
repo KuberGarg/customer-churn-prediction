@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: churn-project
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: churn-project
+
+  template:
+    metadata:
+      labels:
+        app: churn-project
+
+    spec:
+      containers:
+      - name: churn-project
+
+        image: churn-project
+
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 80
