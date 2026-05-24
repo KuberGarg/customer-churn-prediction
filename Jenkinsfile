@@ -4,12 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/KuberGarg/customer-churn-prediction.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'pip install -r requirements.txt'
